@@ -9,15 +9,15 @@ var xmlhttp = new XMLHttpRequest();
             var i, j;
             var displayData = "";
 
-            for (i in dataArray.results)
+            for (i in dataArray.meteo_results)
             {
-                for (j in dataArray.results[i].description)
+                for (j in dataArray.meteo_results[i].description)
                 {
-                    displayData += "<b>Name: </b> " + dataArray.results[i].name + "<br>";
-                    displayData += "<b>Designed by: </b> " + dataArray.results[i].iso2 + "<br>";
-                    displayData += "<b>Latest Release: </b> " + dataArray.results[i].country + "<br>";
-                    displayData += "<b>Object Oriented: </b> " + dataArray.results[i].admin1 + "<br>";
-                    displayData += "<b>Description: </b> " + dataArray.results[i].description[j].admin1 + "<br>";
+                    displayData += "<b>Name: </b> " + dataArray.meteo_results[i].name + "<br>";
+                    displayData += "<b>Designed by: </b> " + dataArray.meteo_results[i].designed_by + "<br>";
+                    displayData += "<b>Latest Release: </b> " + dataArray.meteo_results[i].latest_release + "<br>";
+                    displayData += "<b>Object Oriented: </b> " + dataArray.meteo_results[i].paradigm.object_oriented + "<br>";
+                    displayData += "<b>Description: </b> " + dataArray.meteo_results[i].description[j].description_data + "<br>";
                     displayData += "<br><hr>";
                 }
             }
