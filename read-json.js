@@ -9,15 +9,15 @@ var xmlhttp = new XMLHttpRequest();
             var i, j;
             var displayData = "";
 
-            for (i in dataArray.programming_languages)
+            for (i in dataArray.results)
             {
-                for (j in dataArray.programming_languages[i].description)
+                for (j in dataArray.results[i].description)
                 {
-                    displayData += "<b>Name: </b> " + dataArray.programming_languages[i].name + "<br>";
-                    displayData += "<b>Designed by: </b> " + dataArray.programming_languages[i].designed_by + "<br>";
-                    displayData += "<b>Latest Release: </b> " + dataArray.programming_languages[i].latest_release + "<br>";
-                    displayData += "<b>Object Oriented: </b> " + dataArray.programming_languages[i].paradigm.object_oriented + "<br>";
-                    displayData += "<b>Description: </b> " + dataArray.programming_languages[i].description[j].description_data + "<br>";
+                    displayData += "<b>Name: </b> " + dataArray.results[i].name + "<br>";
+                    displayData += "<b>Designed by: </b> " + dataArray.results[i].iso2 + "<br>";
+                    displayData += "<b>Latest Release: </b> " + dataArray.results[i].country + "<br>";
+                    displayData += "<b>Object Oriented: </b> " + dataArray.results[i].admin1 + "<br>";
+                    displayData += "<b>Description: </b> " + dataArray.results[i].description[j].admin1 + "<br>";
                     displayData += "<br><hr>";
                 }
             }
@@ -26,5 +26,5 @@ var xmlhttp = new XMLHttpRequest();
         document.getElementById("displayData").innerHTML = displayData;
         };
         
-        xmlhttp.open("GET", "programmingLanguages.json", true);
+        xmlhttp.open("GET", "data-meteo.json", true);
         xmlhttp.send();
