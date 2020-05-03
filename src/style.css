@@ -1,0 +1,28 @@
+body {
+        background-color: black;
+        color: white;
+      }
+.container {
+  margin-top: 50px;
+}
+button {
+  color: black;
+}
+.label {
+  border: 1px solid grey;
+  margin: 0;
+  font-size: 10px;
+  
+}
+img {
+  width: 30px;
+}
+#weather {
+  width: 100px;
+}
+.weather {
+  font-size: 16em;
+}
+i {
+ margin: 5px; 
+}
